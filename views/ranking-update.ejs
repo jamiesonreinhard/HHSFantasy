@@ -1,0 +1,29 @@
+<%- include("partials/header"); %>
+
+<div class="container-fluid">
+  <h1>Edit Power Rankings</h1>
+
+  <% players.forEach(function(player){ %>
+    <form class="" action="/ranking-update" method="put">
+        <div class="form-group">
+          <h3 name="playerName"> <%= player.name %> </h3>
+          <label>Ranking</label>
+          <input class="form-control" type="number" name="newRanking">
+          <label>Summary</label>
+          <textarea class="form-control" name="newBio" rows="5" cols="30"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Publish</button>
+        <hr>
+      </form>
+  <% }) %>
+</div>
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); %>

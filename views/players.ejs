@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<div class="container-fluid">
+  <h1>Power Rankings</h1>
+  <div class="row">
+    <%  players.forEach(function(player){ %>
+    <div class="col-lg-6 col-sm-12 rank-box card">
+
+
+
+          <h1><%=player.rank%></h1>
+          <h3><%=player.name%></h3>
+          <p>
+          <%=player.bio%>
+          </p>
+
+
+
+
+    </div>
+    <% }) %>
+  </div>
+
+
+
+
+</div>
+
+<%- include("partials/footer"); %>
